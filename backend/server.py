@@ -290,7 +290,7 @@ async def root():
 
 @app.get("/api/health")
 async def health_check():
-    return {"status": "healthy", "database": "connected" if db else "disconnected"}
+    return {"status": "healthy", "database": "connected" if db is not None else "disconnected"}
 
 @app.post("/api/process-video")
 async def process_video(request: VideoRequest):
