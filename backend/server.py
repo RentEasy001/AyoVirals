@@ -334,7 +334,7 @@ async def process_video(request: VideoRequest):
         }
         
         # Save to database if available
-        if db:
+        if db is not None:
             try:
                 videos_collection.insert_one({
                     "id": video_id,
