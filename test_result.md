@@ -162,11 +162,14 @@ backend:
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: false
         agent: "main"
         comment: "yt-dlp integration code added but not tested yet. Video downloading and audio extraction functionality needs testing"
+      - working: false
+        agent: "testing"
+        comment: "yt-dlp v2025.06.30 is installed and functional. However, the download_video function is implemented but not being called in the process_video endpoint. The endpoint currently uses mock responses instead of actual video downloading. Real integration needs to be connected to the main processing flow."
   
   - task: "Local Whisper transcription"
     implemented: true
