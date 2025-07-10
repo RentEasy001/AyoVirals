@@ -119,15 +119,18 @@ backend:
   
   - task: "Video URL processing endpoint"
     implemented: true
-    working: false
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: false
         agent: "main"
         comment: "Created /api/process-video endpoint with mock response. Real video processing with yt-dlp and whisper integration needed"
+      - working: true
+        agent: "testing"
+        comment: "Fixed PyMongo database truth value testing issue. Endpoint working with mock responses. Platform detection, persona-based hook generation, and keyword generation all functional. Returns proper JSON with id, summary, hooks, keywords, platform, and persona fields. Tested with YouTube, TikTok, Instagram, Twitter/X, and Facebook URLs."
   
   - task: "Persona-based hook generation system"
     implemented: true
