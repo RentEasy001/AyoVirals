@@ -258,8 +258,8 @@ metadata:
 
 test_plan:
   current_focus:
-    - "Video URL processing endpoint"
     - "yt-dlp video downloading integration"
+    - "Local Whisper transcription"
     - "Backend API integration"
   stuck_tasks: []
   test_all: false
