@@ -368,7 +368,7 @@ async def get_personas():
 @app.get("/api/videos/{video_id}")
 async def get_video(video_id: str):
     """Get video analysis by ID"""
-    if not db:
+    if db is None:
         raise HTTPException(status_code=503, detail="Database not available")
     
     try:
