@@ -177,11 +177,14 @@ backend:
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: false
         agent: "main"
         comment: "faster-whisper dependency added, transcription function created as placeholder. Real transcription needs implementation"
+      - working: false
+        agent: "testing"
+        comment: "faster-whisper library is installed and available. The transcribe_audio function exists but only returns mock transcription text. Function is not being called in the main processing flow. Real Whisper integration needs to be implemented and connected to the video processing pipeline."
 
 frontend:
   - task: "Mobile-first responsive UI"
