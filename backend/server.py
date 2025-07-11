@@ -389,7 +389,7 @@ async def download_video(url: str) -> tuple:
         # Download audio only
         audio_file = os.path.join(temp_dir, "audio.%(ext)s")
         cmd_download = [
-            "yt-dlp",
+            "/root/.venv/bin/yt-dlp",
             "-x",
             "--audio-format", "wav",
             "--audio-quality", "0",
