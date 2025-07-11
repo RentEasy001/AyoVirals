@@ -12,6 +12,7 @@ import subprocess
 import threading
 import logging
 from pathlib import Path
+from replit_config import setup_replit
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
