@@ -161,7 +161,7 @@ backend:
   
   - task: "yt-dlp video downloading integration"
     implemented: true
-    working: false
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "high"
@@ -173,6 +173,9 @@ backend:
       - working: false
         agent: "testing"
         comment: "yt-dlp v2025.06.30 is installed and functional. However, the download_video function is implemented but not being called in the process_video endpoint. The endpoint currently uses mock responses instead of actual video downloading. Real integration needs to be connected to the main processing flow."
+      - working: true
+        agent: "testing"
+        comment: "Fixed yt-dlp path issue (changed from 'yt-dlp' to '/root/.venv/bin/yt-dlp') and installed missing ffmpeg dependency. Video downloading now working correctly. Successfully tested with YouTube video - downloads audio, extracts content, and processes with real transcription. Integration fully functional."
   
   - task: "Local Whisper transcription"
     implemented: true
