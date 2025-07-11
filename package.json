@@ -1,0 +1,43 @@
+{
+  "name": "ayovirals-replit",
+  "version": "2.0.0",
+  "description": "AyoVirals - Hook & Keyword Generator for Replit",
+  "main": "main.py",
+  "scripts": {
+    "start": "python main.py",
+    "dev": "python main.py",
+    "install-deps": "pip install -r backend/requirements.txt && cd frontend && yarn install",
+    "build": "cd frontend && yarn build",
+    "backend": "cd backend && python -m uvicorn server:app --host 0.0.0.0 --port 8001 --reload",
+    "frontend": "cd frontend && yarn start",
+    "test": "cd backend && python -m pytest tests/ -v",
+    "lint": "cd backend && python -m flake8 .",
+    "format": "cd backend && python -m black ."
+  },
+  "keywords": [
+    "viral",
+    "hooks",
+    "keywords",
+    "social-media",
+    "content-generation",
+    "fastapi",
+    "react",
+    "mongodb"
+  ],
+  "author": "AyoVirals",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "python": ">=3.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/user/ayovirals-replit"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
