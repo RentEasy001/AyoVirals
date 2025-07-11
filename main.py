@@ -46,6 +46,9 @@ class AyoViralsApp:
         os.environ['MONGO_URL'] = 'mongodb://localhost:27017'
         os.environ['DB_NAME'] = 'ayovirals_db'
         
+        # Setup Replit configuration and keep-alive
+        setup_replit()
+        
         logger.info(f"Environment setup complete")
         logger.info(f"Backend URL: {backend_url}")
         
