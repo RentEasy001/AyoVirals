@@ -368,7 +368,7 @@ async def download_video(url: str) -> tuple:
         
         # Download video info first
         cmd_info = [
-            "yt-dlp",
+            "/root/.venv/bin/yt-dlp",
             "--print", "title",
             "--print", "duration",
             "--print", "description",
